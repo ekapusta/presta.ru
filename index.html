@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="ru-RU">
+<head>
+  <meta charset="utf-8"/>
+  <title>Presta.ru - Займ онлайн за 10 минут! </title>
+  <base href="/" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <meta name="description" content="Возьмите срочный займ онлайн у presta.ru сейчас! Круглосуточные моментальные займы на банковские карты, счета и денежными переводами. Регистрация за 10 минут!"/>
+  <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Presta.ru" />
+  <link rel="manifest" href="/site.webmanifest"/>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      -moz-text-size-adjust: none;
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+
+      --color-default: #212121;
+      --color-primary: #44cf65;
+      --color-accent: #ff9800;
+      --color-danger: #f44336;
+
+      --color-container: white;
+      --color-surface: whitesmoke;
+      --color-outline: lightgrey;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      line-height: 1.5;
+      font-family: Arial,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+      font-size: 16px;
+    }
+
+    blockquote {
+      margin: 0;
+      padding: 1rem;
+    }
+
+    h1 {
+      margin-block-start: 1.45rem;
+      margin-block-end: 1.45rem;
+    }
+
+    h2 {
+      margin-block-start: 1.25rem;
+      margin-block-end: 1.25rem;
+    }
+
+    h3 {
+      margin-block-start: 1.175rem;
+      margin-block-end: 1.175rem;
+    }
+
+    h4 {
+      margin-block-start: 1.15rem;
+      margin-block-end: 1.15rem;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    p {
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
+    }
+
+    ul[role='list'],
+    ol[role='list'] {
+      list-style: none;
+    }
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    button,
+    input,
+    label {
+      line-height: 1.1;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      text-wrap: balance;
+    }
+
+    a:not([class]) {
+      text-decoration-skip-ink: auto;
+      color: currentColor;
+    }
+
+    img,
+    picture {
+      max-width: 100%;
+      display: block;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    textarea:not([rows]) {
+      min-height: 10rem;
+    }
+
+    :target {
+      scroll-margin-block: 5ex;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .section {
+      padding: 1rem 0;
+    }
+
+    .section-title {
+      margin-bottom: 1rem;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .row.is-autosize {
+      flex-wrap: nowrap;
+    }
+    .row:not(.is-no-gutter) {
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+    .column {
+      display: block;
+      width: 100%
+    }
+    .row:not(.is-no-gutter) .column {
+      padding: 0 1rem
+    }
+    .row-spacing .column {
+      margin-bottom: 1rem;
+    }
+    .text-accent {
+      color: var(--color-accent);
+    }
+
+    .header {
+      background-color: var(--color-container);
+      box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
+    }
+    .toolbar {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+      user-select: none;
+      padding: 1rem 0;
+    }
+
+    .logo-icon {
+      background-color: var(--color-primary);
+      display: block;
+      height: 2.75rem;
+      width: 2.75rem;
+      padding: 0.35rem;
+      border-radius: 0.25rem;
+    }
+
+    .brand {
+      text-transform: uppercase;
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 1rem 0.15rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: var(--color-primary);
+    }
+    .nav-link:hover,
+    .nav-link.is-active {
+      text-decoration: underline;
+    }
+
+
+    .promo {
+      padding: 2rem 0;
+      background-color: var(--color-surface);
+    }
+    .promo-title {
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+    .card {
+      display: block;
+      padding: 1rem;
+      background-color: var(--color-container);
+    }
+    .footer {
+      background-color: var(--color-surface);
+      padding: 1rem 0;
+      text-align: center;
+    }
+    .footer-menu {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      justify-content: center;
+    }
+    .footer-link {
+      display: block;
+      color: var(--color-default);
+    }
+    .footer-link:hover {
+      color: var(--color-accent);
+    }
+
+    .footer-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .footer-contact {
+      font-weight: bold;
+      color: var(--color-primary);
+    }
+
+    .section {
+      margin: 1rem 0;
+    }
+    .section.is-surface {
+      background-color: var(--color-surface);
+    }
+
+    .box {
+      background-color: var(--color-surface);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+      height: 100%;
+    }
+
+    .box-icon {
+      margin: 0 auto;
+      fill: var(--color-primary);
+    }
+
+    .box-title {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+    .box-preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-label {
+      font-size: 1.25rem;
+    }
+    .form-slider {
+      width: 100%;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+    .form-ranges {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 0.85rem;
+    }
+    .form-control {
+      margin-bottom: 1rem;
+    }
+    .form-number {
+      width: 80px;
+      padding: 0 0.25rem;
+      outline: none;
+      border: 1px solid var(--color-primary);
+      border-radius: 0.25rem;
+      height: 2rem;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 0.5rem;
+      justify-content: space-between;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--color-outline);
+    }
+    .detail-label {
+      font-size: 1rem;
+    }
+    .detail-value {
+      font-size: 1.2rem;
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      cursor: pointer;
+      outline: none;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 15px;
+      background: #ccc;
+      border-radius: 16px;
+    }
+
+    input[type="range"]::-moz-range-track {
+      height: 15px;
+      background: #ccc;
+      border-radius: 16px;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 15px;
+      width: 15px;
+      background-color: var(--color-container);
+      border-radius: 50%;
+      border: 2px solid var(--color-primary);
+      box-shadow: -407px 0 0 400px var(--color-primary);
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      height: 15px;
+      width: 15px;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 1px solid var(--color-primary);
+      box-shadow: -407px 0 0 400px var(--color-primary);
+    }
+
+
+    .offer-link {
+      display: inline-flex;
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      background-image: linear-gradient(180deg, #febc0b 30%, var(--color-accent) 70%);
+      color: var(--color-container);
+      border: none;
+      border-radius: 0.35rem;
+      cursor: pointer;
+    }
+
+    .offer-title,
+    .offer-subtitle,
+    .offer {
+      text-align: center;
+    }
+
+    .footer-logos {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+    }
+    .footer-docs {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    @media (min-width: 600px) and (max-width: 839.98px) and (orientation: portrait) {
+      .container {
+        max-width: 788px;
+      }
+    }
+
+    @media (min-width: 960px) and (max-width: 1279.98px) and (orientation: landscape) {
+      .container {
+        max-width: 928px;
+      }
+    }
+
+    @media (min-width: 840px) and (orientation: portrait) {
+      .container {
+        max-width: 808px;
+      }
+    }
+
+    @media (min-width: 1280px) and (orientation: landscape) {
+      .container {
+        max-width: 1200px;
+      }
+    }
+
+    @media (min-width: 0) and (orientation: portrait),(min-width: 0) and (orientation: landscape) {
+      [class="handset-*"] {
+        flex: 0 0 auto
+      }
+    }
+
+    @media (min-width: 600px) and (orientation: portrait), (min-width: 960px) and (orientation: landscape) {
+      [class="tablet-*"] {
+        flex: 0 0 auto
+      }
+      .tablet-4 {
+        width: 33.333%
+      }
+      .tablet-6 {
+        width: 50%
+      }
+      .tablet-8 {
+        width: 66.667%
+      }
+      .section {
+        margin: 2rem 0;
+      }
+      .promo-title {
+        font-size: 1.75rem;
+      }
+      .card {
+        padding: 2rem;
+      }
+      .footer {
+        padding: 2rem 0;
+        text-align: left;
+      }
+      .row-spacing .column {
+        margin-bottom: 2rem;
+      }
+      .footer-menu {
+        justify-content: start;
+      }
+      .details {
+        flex-direction: column;
+        justify-content: start;
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .column-separate {
+        border-right: 2px solid var(--color-outline);
+      }
+
+      .offer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+      }
+
+      .offer-link {
+        text-align: left;
+      }
+      .offer-title,
+      .offer-subtitle {
+        text-align: right;
+      }
+    }
+
+    @media (min-width: 840px) and (orientation: portrait), (min-width: 1280px) and (orientation: landscape) {
+      [class="web-*"] {
+        flex: 0 0 auto
+      }
+      .web-3 {
+        width: 25%
+      }
+      .web-4 {
+        width: 33.333%
+      }
+      .web-9 {
+        width: 75%
+      }
+      .section-title {
+        margin-bottom: 2rem;
+      }
+      .promo-title {
+        font-size: 2rem;
+      }
+      .card {
+        padding: 3rem;
+      }
+    }
+  </style>
+  <script>
+    let matrix, proposal, amount, amountNumber, time, timeNumber, sum, interest, debt, returnDate;
+    const locale = 'ru-RU';
+
+    function init() {
+      matrix = createMatrix();
+      amount = document.getElementById('amount');
+      amountNumber = document.getElementById('amount-number');
+      time = document.getElementById('time');
+      timeNumber = document.getElementById('time-number');
+      sum = document.getElementById('sum');
+      debt = document.getElementById('debt');
+      interest = document.getElementById('interest');
+      returnDate = document.getElementById('returnDate');
+      amount.addEventListener('input', () => {
+        amountNumber.value = amount.value;
+        updateProposal()
+      });
+      amountNumber.addEventListener('input', () => {
+        amount.value = amountNumber.value;
+        updateProposal()
+      });
+      time.addEventListener('input',  () => {
+        timeNumber.value = time.value;
+        updateProposal();
+      });
+      timeNumber.addEventListener('input', () => {
+        time.value = timeNumber.value;
+        updateProposal();
+      });
+      proposal = updateProposal();
+    }
+
+    function addDays(days) {
+      const current = new Date();
+      current.setDate(current.getDate() + days);
+
+      return current;
+    }
+
+    function formatNumber(number) {
+      return new Intl.NumberFormat(locale, { maximumSignificantDigits: 3 }).format(
+        number
+      );
+    }
+
+    function createMatrix() {
+      const matrix = {};
+      const formatter = new Intl.DateTimeFormat(locale);
+
+      for (let loanAmount = 100; loanAmount <= 30000; loanAmount += 100) {
+        matrix[loanAmount] = {};
+        for (let loanTime = 7; loanTime <= 30; loanTime += 1) {
+          const interest = Math.floor(loanAmount * 0.008 * loanTime);
+
+          matrix[loanAmount][loanTime] = {
+            time: loanTime,
+            sum: loanAmount,
+            debt: loanAmount + interest,
+            interest,
+            returnDate: formatter.format(addDays(loanTime)),
+          };
+        }
+      }
+
+      return matrix;
+    }
+
+    function updateProposal() {
+      proposal = matrix[amount.value][time.value];
+
+      sum.innerHTML = formatNumber(proposal.sum) + ' ₽';
+      debt.innerHTML = formatNumber(proposal.debt) + ' ₽';
+      interest.innerHTML = formatNumber(proposal.interest) + ' ₽';
+      returnDate.innerHTML = proposal.returnDate;
+    }
+
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="toolbar">
+      <div class="logo">
+        <svg class="logo-icon" width="38.976864" height="24.14325" viewBox="0 0 38.976864 24.14325" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#fff" d="M 17.5377 24.1433 L 21.7869 1.1e-05 L 33.6847 1.1e-05 C 35.5646 1.1e-05 36.9166 0.321921 37.7407 0.965741 C 38.5648 1.60956 38.9769 2.60104 38.9769 3.94019 C 38.9769 6.00041 38.5133 7.64859 37.5862 8.88473 C 36.6849 10.0951 35.6676 10.8419 34.5345 11.1252 L 34.4959 11.357 C 35.7578 11.5888 36.6462 12.1167 37.1613 12.9408 C 37.7021 13.7649 37.9725 14.7692 37.9725 15.9539 C 37.9725 17.396 37.7021 18.748 37.1613 20.0099 C 36.6462 21.2461 35.8479 22.2504 34.7663 23.023 C 33.7104 23.7698 32.3713 24.1433 30.7488 24.1433 Z M 20.2803 1.73833 L 3.94017 1.1e-05 L 20.5894 1.1e-05 Z M 19.6623 5.44673 L 3.28348 3.70841 L 19.9327 3.70841 Z M 27.5426 8.88473 L 29.8217 8.88473 C 30.4913 8.88473 30.9549 8.6272 31.2124 8.11214 C 31.4699 7.59709 31.5987 7.01765 31.5987 6.37383 C 31.5987 6.03904 31.5214 5.78151 31.3669 5.60125 C 31.2124 5.39522 30.9291 5.29221 30.5171 5.29221 L 28.1993 5.29221 Z M 19.0056 9.15513 L 2.62678 7.41682 L 19.3146 7.41682 Z M 18.3489 12.8635 L 1.97008 11.1252 L 18.6579 11.1252 Z M 25.8429 18.4648 L 28.7015 18.4648 C 29.3968 18.4648 29.899 18.1944 30.208 17.6536 C 30.5171 17.1127 30.6716 16.4818 30.6716 15.7607 C 30.6716 15.4002 30.5814 15.104 30.4012 14.8723 C 30.2209 14.6405 29.899 14.5246 29.4354 14.5246 L 26.5383 14.5246 Z M 17.6922 16.5719 L 1.31339 14.8336 L 18.0012 14.8336 Z M 17.0355 20.2803 L 0.656691 18.542 L 17.3445 18.542 Z M 16.3788 24.0274 L -5e-06 22.2891 L 16.6878 22.2891 Z"/>
+        </svg>
+        <div class="brand">Presta.ru</div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="promo">
+    <div class="container">
+      <h1 class="promo-title">Получите займ <span class="text-accent"> за 7 минут!</span></h1>
+      <div class="card">
+        <div class="row">
+          <div class="column tablet-8 web-9 column-separate">
+            <form class="form" id="form">
+              <div class="form-control">
+                <div class="form-group">
+                  <label class="form-label" for="amount">Сколько вам нужно?</label>
+                  <input class="form-number" type="number" id="amount-number" value="20000" min="100" max="30000" step="100">
+                </div>
+                <input id="amount" class="form-slider" type="range" min="100" max="30000" step="100" value="20000" />
+                <div class="form-ranges">
+                  <div>100 ₽</div>
+                  <div>30 000 ₽</div>
+                </div>
+              </div>
+              <div class="form-control">
+                <div class="form-group">
+                  <label class="form-label" for="time">На какой срок?</label>
+                  <input class="form-number" type="number" id="time-number" value="14" min="7" max="30" step="1">
+                </div>
+                <input id="time" class="form-slider" type="range" min="7" max="30" step="1" value="14" />
+                <div class="form-ranges">
+                  <div>7 дней</div>
+                  <div>30 дней</div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="column tablet-4 web-3">
+            <div class="details">
+              <div class="detail-label">Вы берете</div>
+              <div class="detail-value" id="sum">20 000 ₽</div>
+            </div>
+            <div class="details">
+              <div class="detail-label">Проценты</div>
+              <div class="detail-value" id="interest">0</div>
+            </div>
+            <div class="details">
+              <div class="detail-label">Вы отдаете</div>
+              <div class="detail-value" id="debt">20 000 ₽</div>
+            </div>
+            <div class="details">
+              <div class="detail-label">Возврат</div>
+              <div class="detail-value" id="returnDate">14 ноября, 2024</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Почему стоит выбрать Presta.ru</h2>
+      <div class="row row-spacing">
+        <div class="column tablet-6 web-4">
+          <div class="box">
+            <div class="box-title">Мгновенное одобрение</div>
+            <div class="box-preview">
+              <img src="/images/features/decision.png" alt="" width="100" height="100">
+            </div>
+            <div class="box-description">Получите одобрение сразу после заполнения заявки</div>
+          </div>
+        </div>
+
+        <div class="column tablet-6 web-4">
+          <div class="box">
+            <div class="box-title">Полностью цифровой процесс</div>
+            <div class="box-preview">
+              <img src="/images/features/disbursement.png" alt="" width="100" height="100">
+            </div>
+            <div class="box-description">Простая заявка на получение займа онлайн без офлайн-бумаг</div>
+          </div>
+        </div>
+
+        <div class="column tablet-6 web-4">
+          <div class="box">
+            <div class="box-title">Безопасность</div>
+            <div class="box-preview">
+              <img src="/images/features/private.png" alt="" width="100" height="100">
+            </div>
+            <div class="box-description">Мы храним и обрабатываем ваши данные безопасно и в соответствии с законами</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section is-surface">
+    <div class="container">
+      <div class="row">
+        <div class="column tablet-6">
+          <h3 class="offer-title">Оценили преимущества Presta.ru?</h3>
+          <p class="offer-subtitle">Тогда добро пожаловать за деньгами!</p>
+        </div>
+        <div class="column tablet-6">
+          <div class="offer">
+            <button class="offer-link" type="button">Получить займ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">При подаче заявления имейте под рукой следующее:</h2>
+      <div class="row row-spacing">
+        <div class="column tablet-6 web-4">
+          <div class="box">
+            <div class="box-icon">
+              <svg height="100px" width="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve">
+                <path d="M189.256,398.225H34.973V104.214c0-4.823-3.91-8.733-8.733-8.733c-4.823,0-8.733,3.91-8.733,8.733v302.744c0,4.823,3.91,8.733,8.733,8.733h163.016c4.823,0,8.733-3.91,8.733-8.733S194.079,398.225,189.256,398.225z"/>
+                <path d="M315.011,0H26.24c-4.823,0-8.733,3.91-8.733,8.733v66.371c0,4.824,3.91,8.733,8.733,8.733c4.823,0,8.733-3.91,8.733-8.733V17.466h271.305v273.052c0,4.823,3.91,8.733,8.733,8.733s8.733-3.91,8.733-8.733V8.733C323.744,3.91,319.834,0,315.011,0z"/>
+                <path d="M170.626,109.454c-54.253,0-98.392,44.139-98.392,98.392c0,54.253,44.139,98.392,98.392,98.392c54.253,0,98.392-44.139,98.392-98.392C269.017,153.593,224.878,109.454,170.626,109.454z M90.178,216.579h17.04c1.171,21.008,6.553,40.675,15.487,56.427C104.915,259.889,92.669,239.677,90.178,216.579z M107.218,199.113h-17.04c2.491-23.098,14.737-43.31,32.526-56.427C113.771,158.438,108.388,178.104,107.218,199.113z M161.892,287.236c-19.432-6.823-34.923-35.807-37.172-70.657h37.172V287.236z M161.892,199.113H124.72c2.25-34.851,17.741-63.834,37.172-70.657V199.113z M179.358,287.236v-70.657h37.172C214.281,251.429,198.789,280.412,179.358,287.236z M179.358,199.113v-70.657c19.432,6.823,34.923,35.807,37.172,70.657H179.358z M251.073,199.113h-17.04c-1.171-21.008-6.553-40.675-15.487-56.427C236.336,155.803,248.582,176.014,251.073,199.113z M218.548,273.005c8.932-15.752,14.315-35.419,15.487-56.427h17.04C248.583,239.677,236.337,259.889,218.548,273.005z"/>
+                <path d="M221.859,62.878H119.392c-4.823,0-8.733,3.91-8.733,8.733s3.91,8.733,8.733,8.733h102.467c4.823,0,8.733-3.91,8.733-8.733S226.682,62.878,221.859,62.878z"/>
+                <path d="M485.76,312.06h-71.775c-4.823,0-8.733,3.91-8.733,8.733s3.91,8.733,8.733,8.733h63.042v165.008H227.099V329.526h157.776c4.823,0,8.733-3.91,8.733-8.733s-3.91-8.733-8.733-8.733H218.366c-4.823,0-8.733,3.91-8.733,8.733v182.474c0,4.823,3.91,8.733,8.733,8.733H485.76c4.823,0,8.733-3.91,8.733-8.733V320.793C494.493,315.97,490.583,312.06,485.76,312.06z"/>
+                <path d="M322.927,427.917c11.079-8.169,18.283-21.305,18.283-36.096c0-24.719-20.11-44.829-44.829-44.829s-44.829,20.11-44.829,44.829c0,14.791,7.204,27.927,18.283,36.096c-11.079,8.169-18.283,21.305-18.283,36.096c0,4.823,3.91,8.733,8.733,8.733h72.193c4.823,0,8.733-3.91,8.733-8.733C341.21,449.222,334.006,436.087,322.927,427.917z M269.017,391.821c0-15.088,12.275-27.363,27.363-27.363s27.363,12.275,27.363,27.363s-12.275,27.363-27.363,27.363S269.017,406.909,269.017,391.821z M270.446,455.281c3.653-10.82,13.898-18.63,25.935-18.63c12.036,0,22.282,7.811,25.935,18.63H270.446z"/>
+                <path d="M454.739,356.307h-85.001c-4.823,0-8.733,3.91-8.733,8.733c0,4.823,3.91,8.733,8.733,8.733h85.001c4.823,0,8.733-3.91,8.733-8.733C463.472,360.217,459.562,356.307,454.739,356.307z"/>
+                <path d="M454.739,389.298h-38.425c-4.823,0-8.733,3.91-8.733,8.733s3.91,8.733,8.733,8.733h38.425c4.823,0,8.733-3.91,8.733-8.733S459.562,389.298,454.739,389.298z"/>
+                <path d="M387.204,389.298h-17.466c-4.823,0-8.733,3.91-8.733,8.733s3.91,8.733,8.733,8.733h17.466c4.823,0,8.733-3.91,8.733-8.733S392.027,389.298,387.204,389.298z"/>
+                <path d="M454.739,455.281h-16.302c-4.823,0-8.733,3.91-8.733,8.733s3.91,8.733,8.733,8.733h16.302c4.823,0,8.733-3.91,8.733-8.733S459.562,455.281,454.739,455.281z"/>
+                <path d="M409.328,455.281h-39.59c-4.823,0-8.733,3.91-8.733,8.733s3.91,8.733,8.733,8.733h39.59c4.823,0,8.733-3.91,8.733-8.733S414.151,455.281,409.328,455.281z"/>
+                <path d="M454.739,422.29h-85.001c-4.823,0-8.733,3.91-8.733,8.733s3.91,8.733,8.733,8.733h85.001c4.823,0,8.733-3.91,8.733-8.733S459.562,422.29,454.739,422.29z"/>
+              </svg>
+            </div>
+            <div class="box-title">Удостоверение личности</div>
+          </div>
+        </div>
+        <div class="column tablet-6 web-4">
+          <div class="box">
+            <div class="box-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" height="100px" viewBox="0 0 24 24" width="100px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+            </div>
+            <div class="box-title">Мобильный телефон</div>
+          </div>
+        </div>
+        <div class="column tablet-6 web-4">
+          <div class="box">
+            <div class="box-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" height="100px" viewBox="0 0 24 24" width="100px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+            </div>
+            <div class="box-title">Банковский счет или карта</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="column tablet-6">
+        <div class="footer-group">
+          <div class="footer-copyright">© 2025, Presta.ru | Все права защищены</div>
+          <div class="footer-description">Presta.ru — быстрые и простые онлайн займы для всех. Presta.ru инновационная финансовая платформа с полной прозрачностью для наших клиентов.</div>
+          <div class="footer-logos">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50px"   viewBox="0 0 999.2 776" enable-background="new 0 0 999.2 776" xml:space="preserve">
+              <path  d="M181.1,774.3v-51.5c0-19.7-12-32.6-32.6-32.6c-10.3,0-21.5,3.4-29.2,14.6c-6-9.4-14.6-14.6-27.5-14.6c-8.6,0-17.2,2.6-24,12v-10.3h-18v82.4h18v-45.5c0-14.6,7.7-21.5,19.7-21.5s18,7.7,18,21.5v45.5h18v-45.5c0-14.6,8.6-21.5,19.7-21.5c12,0,18,7.7,18,21.5v45.5H181.1z M448.1,691.9h-29.2V667h-18v24.9h-16.3v16.3h16.3v37.8c0,18.9,7.7,30,28.3,30c7.7,0,16.3-2.6,22.3-6l-5.2-15.5c-5.2,3.4-11.2,4.3-15.5,4.3c-8.6,0-12-5.2-12-13.7v-36.9h29.2V691.9z M600.9,690.1c-10.3,0-17.2,5.2-21.5,12v-10.3h-18v82.4h18v-46.4c0-13.7,6-21.5,17.2-21.5c3.4,0,7.7,0.9,11.2,1.7l5.2-17.2C609.4,690.1,604.3,690.1,600.9,690.1L600.9,690.1z M370,698.7c-8.6-6-20.6-8.6-33.5-8.6c-20.6,0-34.3,10.3-34.3,26.6c0,13.7,10.3,21.5,28.3,24l8.6,0.9c9.4,1.7,14.6,4.3,14.6,8.6c0,6-6.9,10.3-18.9,10.3c-12,0-21.5-4.3-27.5-8.6l-8.6,13.7c9.4,6.9,22.3,10.3,35.2,10.3c24,0,37.8-11.2,37.8-26.6c0-14.6-11.2-22.3-28.3-24.9l-8.6-0.9c-7.7-0.9-13.7-2.6-13.7-7.7c0-6,6-9.4,15.5-9.4c10.3,0,20.6,4.3,25.8,6.9L370,698.7L370,698.7z M848.9,690.1c-10.3,0-17.2,5.2-21.5,12v-10.3h-18v82.4h18v-46.4c0-13.7,6-21.5,17.2-21.5c3.4,0,7.7,0.9,11.2,1.7L861,691C857.5,690.1,852.4,690.1,848.9,690.1L848.9,690.1z M618.9,733.1c0,24.9,17.2,42.9,43.8,42.9c12,0,20.6-2.6,29.2-9.4l-8.6-14.6c-6.9,5.2-13.7,7.7-21.5,7.7c-14.6,0-24.9-10.3-24.9-26.6c0-15.5,10.3-25.8,24.9-26.6c7.7,0,14.6,2.6,21.5,7.7l8.6-14.6c-8.6-6.9-17.2-9.4-29.2-9.4C636.1,690.1,618.9,708.2,618.9,733.1L618.9,733.1L618.9,733.1z M785.4,733.1v-41.2h-18v10.3c-6-7.7-14.6-12-25.8-12c-23.2,0-41.2,18-41.2,42.9c0,24.9,18,42.9,41.2,42.9c12,0,20.6-4.3,25.8-12v10.3h18V733.1L785.4,733.1z M719.3,733.1c0-14.6,9.4-26.6,24.9-26.6c14.6,0,24.9,11.2,24.9,26.6c0,14.6-10.3,26.6-24.9,26.6C728.8,758.8,719.3,747.6,719.3,733.1L719.3,733.1z M503.9,690.1c-24,0-41.2,17.2-41.2,42.9c0,25.8,17.2,42.9,42.1,42.9c12,0,24-3.4,33.5-11.2l-8.6-12.9c-6.9,5.2-15.5,8.6-24,8.6c-11.2,0-22.3-5.2-24.9-19.7h60.9c0-2.6,0-4.3,0-6.9C542.5,707.3,527,690.1,503.9,690.1L503.9,690.1L503.9,690.1z M503.9,705.6c11.2,0,18.9,6.9,20.6,19.7h-42.9C483.3,714.2,491,705.6,503.9,705.6L503.9,705.6z M951.1,733.1v-73.8h-18v42.9c-6-7.7-14.6-12-25.8-12c-23.2,0-41.2,18-41.2,42.9c0,24.9,18,42.9,41.2,42.9c12,0,20.6-4.3,25.8-12v10.3h18V733.1L951.1,733.1z M885,733.1c0-14.6,9.4-26.6,24.9-26.6c14.6,0,24.9,11.2,24.9,26.6c0,14.6-10.3,26.6-24.9,26.6C894.4,758.8,885,747.6,885,733.1L885,733.1z M282.4,733.1v-41.2h-18v10.3c-6-7.7-14.6-12-25.8-12c-23.2,0-41.2,18-41.2,42.9c0,24.9,18,42.9,41.2,42.9c12,0,20.6-4.3,25.8-12v10.3h18V733.1L282.4,733.1zM215.5,733.1c0-14.6,9.4-26.6,24.9-26.6c14.6,0,24.9,11.2,24.9,26.6c0,14.6-10.3,26.6-24.9,26.6C224.9,758.8,215.5,747.6,215.5,733.1z"/>
+              <rect x="364" y="66.1" fill="#FF5A00" width="270.4" height="485.8"/>
+              <path fill="#EB001B" d="M382,309c0-98.7,46.4-186.3,117.6-242.9C447.2,24.9,381.1,0,309,0C138.2,0,0,138.2,0,309s138.2,309,309,309c72.1,0,138.2-24.9,190.6-66.1C428.3,496.1,382,407.7,382,309z"  />
+              <path  fill="#F79E1B" d="M999.2,309c0,170.8-138.2,309-309,309c-72.1,0-138.2-24.9-190.6-66.1c72.1-56.7,117.6-144.2,117.6-242.9S570.8,122.7,499.6,66.1C551.9,24.9,618,0,690.1,0C861,0,999.2,139.1,999.2,309z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 1000 324.68"><path fill="#1434cb" d="m651.19.5c-70.93,0-134.32,36.77-134.32,104.69,0,77.9,112.42,83.28,112.42,122.42,0,16.48-18.88,31.23-51.14,31.23-45.77,0-79.98-20.61-79.98-20.61l-14.64,68.55s39.41,17.41,91.73,17.41c77.55,0,138.58-38.57,138.58-107.66,0-82.32-112.89-87.54-112.89-123.86,0-12.91,15.5-27.05,47.66-27.05,36.29,0,65.89,14.99,65.89,14.99l14.33-66.2S696.61.5,651.18.5h0ZM2.22,5.5L.5,15.49s29.84,5.46,56.72,16.36c34.61,12.49,37.07,19.77,42.9,42.35l63.51,244.83h85.14L379.93,5.5h-84.94l-84.28,213.17-34.39-180.7c-3.15-20.68-19.13-32.48-38.68-32.48,0,0-135.41,0-135.41,0Zm411.87,0l-66.63,313.53h81L494.85,5.5h-80.76Zm451.76,0c-19.53,0-29.88,10.46-37.47,28.73l-118.67,284.8h84.94l16.43-47.47h103.48l9.99,47.47h74.95L934.12,5.5h-68.27Zm11.05,84.71l25.18,117.65h-67.45l42.28-117.65h0Z"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="column tablet-6">
+        <div class="footer-details">
+          ООО МКК "Микрофинтех"<br/>
+          ИНН: 5473020531<br/>
+          КПП: 547301001<br/>
+          ОГРН: 1255400013274<br/>
+          Адрес: 630055, г. Новосибирск, ул. Гнесиных 10/1<br>
+          Телефон: <a href="tel:+79137880261">+7 913 788 0261</a><br>
+          Email: <a href="mailto:microfintech@yandex.ru">microfintech@yandex.ru</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
